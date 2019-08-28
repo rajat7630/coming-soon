@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coming Soon</title>
+	<script >
+		// Get elements
+ var count= new Date("oct 10,2019 18:00:00").getTime();
+        var x= setInterval(function(){
+        var now= new Date().getTime();
+        var d=count-now;
+            var days = Math.floor(d/(1000*60*60*24)) ;
+            var hours= Math.floor((d%(1000*60*60*24))/(1000*60*60)) ;
+            var minutes= Math.floor((d%(1000*60*60))/(1000*60));
+            var seconds= Math.floor((d%(1000*60))/1000);
+            if(days<10)
+                {
+                    days= "0"+days;
+                }
+            if(hours<10)
+                {
+                    hours= "0"+hours;
+                }
+            if(minutes<10)
+                {
+                    minutes= "0"+minutes;
+                }
+            if(seconds<10)
+                {
+                    seconds= "0"+seconds;
+                }
+            document.getElementById("days").innerHTML= days+" days to go";
+            if(d<=0)
+                {clearInterval(x);}
+        },1000);
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+	<style type="text/css">
+		.wd{
+			width: 100vw;
+			height: 100vh;
+			position:relative;
+			scroll-behavior: smooth;
+			scroll-snap-align: start;
+			scroll-snap-stop: always;
+		}
+		.mainbody{
+			scroll-behavior: smooth;
+			position: absolute;
+			background-attachment: fixed;
+			background-image: url("background.png");
+			padding: 0;
+			background-size: cover;
+			scroll-snap-type: y mandatory;
+			scroll-snap-points-y: repeat(5vh);
+			margin: 0;
+		}
+		.text{
+			color: white;
+		}
+		.chakra{
+			margin-left: 50vw; 
+			margin-top: 2vw;
+			position: relative;
+			width: 50vw;
+			height: 50vw;
+		}
+		.o1{
+			z-index: 250;
+			position: absolute;
+			width: 45vw;
+			height: 45vw;
+		}
+		.o2{
+			position: absolute;
+			width: 30vw;
+			height: 30vw;
+			z-index: 200;
+			margin-top: 7.4vw;
+			margin-left: 7.5vw;
+			animation-name: rotateo1;
+			animation-duration: 40s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.o3{
+			position: absolute;
+			width: 45vw;
+			z-index: 50;
+			height: 45vw;
+			animation-name: rotateo1;
+			animation-duration: 45s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.o4{
+			position: absolute;
+			width: 45vw;
+
+			animation-name: rotateo1;
+			animation-duration: 100s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			z-index: 10;
+			height: 45vw;
+		}
+		.title{
+			position:absolute;
+			margin-top: 17vw;
+			width: 35vw;
+			margin-left: 6vw;
+			z-index: 260;
+		}
+		.title-text{
+			animation-name: neon1;
+			animation-iteration-count: infinite;
+			color: #bc13fe;
+			animation-duration: 1.5s;
+			font-family: cursive;
+			font-size: 4vw;
+		}
+		.coming{
+			position: absolute;
+			margin-left: 5vw;
+			margin-top:6vh;
+			color: white;
+			@font-face{
+				  font-family: "Existence Light";
+				  src: url('Existence-Light.otf') format:("opentype");
+			}
+			margin-bottom:1vw; 
+		}
+		.comingsoon{
+			position: relative;
+			@font-face{
+				  font-family: 'Existence Light';
+				  src: url("Existence-Light.otf") ;
+			}
+			color: white;
+			font-size: 5vw;
+			z-index: 100;
+		}
+
+			.days{
+				color: white;
+				font-size: 4vw;
+				z-index: 100;
+			}
+		@keyframes rotateo1{
+			0%{
+				transform: rotateZ(0deg);
+			}
+			100%{
+				transform:rotateZ(360deg);
+			}
+		}
+		@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+  @keyframes neon2{
+  from {
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+  }
+}
+.content{
+	position: absolute;
+	width: 40vw;
+}
+.conflu-content
+{
+	font-size:1.6vw;
+	text-align: justify;
+	color:white;
+}
+.timer{
+	position: absolute;
+	width: 40vw;
+	margin-top: 30vh;
+	padding: 0;
+	border-radius: 6vw;
+	text-align: center;
+	background-color: blue;
+}
+#days{
+	margin:0.5vw;
+	position: relative;
+	color: white;
+	font-size: 3vw;
+}
+
+.hrline{
+	width: 40vw;
+	color: white;
+}
+
+
+
+	</style>
+</head>
+<body class="mainbody">
+	<div class="main wd">
+			<div class="coming">
+				<h1 class="comingsoon">COMING SOON</h1>
+				<hr class="hrline">
+				<div class="content">
+				<p class="conflu-content">
+					A peep at some distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. It always does one good.A peep at some distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. It always does one good.
+				</p>
+			</div>
+			<div class="timer">
+				<h1 id="days"></h1>
+			</div>
+			</div>
+			
+			<div class="chakra">
+			<img class="o1" src="o1.png">
+			<img class="o2" src="o2.png">
+			<img class="o3" src="o3.png">
+			<img class="o4" src="o4.png">
+			<img class="title" src="title.png">
+		</div>
+	</div>
+	<div class="teaser wd">
+		<h1 class="text">Teaser</h1>
+	</div>
+	<div class="sponsers wd">
+		<h1 class="text">Sponmser</h1>
+	</div>
+	<div class="contact wd">
+		<h1 class="text">Contact</h1>
+	</div>
+</body>
+</html>
