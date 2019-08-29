@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coming Soon</title>
+	<script >
+		// Get elements
+ var count= new Date("oct 10,2019 18:00:00").getTime();
+        var x= setInterval(function(){
+        var now= new Date().getTime();
+        var d=count-now;
+            var days = Math.floor(d/(1000*60*60*24)) ;
+            var hours= Math.floor((d%(1000*60*60*24))/(1000*60*60)) ;
+            var minutes= Math.floor((d%(1000*60*60))/(1000*60));
+            var seconds= Math.floor((d%(1000*60))/1000);
+            if(days<10)
+                {
+                    days= "0"+days;
+                }
+            if(hours<10)
+                {
+                    hours= "0"+hours;
+                }
+            if(minutes<10)
+                {
+                    minutes= "0"+minutes;
+                }
+            if(seconds<10)
+                {
+                    seconds= "0"+seconds;
+                }
+            document.getElementById("days").innerHTML= days+" days to go";
+            if(d<=0)
+                {clearInterval(x);}
+        },1000);
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style type="text/css">
+		.wd{
+			width: 100vw;
+			height: 100vh;
+			position:relative;
+			scroll-behavior: smooth;
+			scroll-snap-align: start;
+			scroll-snap-stop: always;
+		}
+		.mainbody{
+			scroll-behavior: smooth;
+			position: absolute;
+			background-attachment: fixed;
+			background-image: url("background.png");
+			padding: 0;
+			background-size: cover;
+			scroll-snap-type: y mandatory;
+			scroll-snap-points-y: repeat(5vh);
+			margin: 0;
+            overflow-x: hidden;
+            
+		}
+        .main wd{
+            overflow-y: hidden;
+        }
+		.text{
+			color: white;
+		}
+		.chakra{
+			margin-left: 50vw; 
+			margin-top: 2vw;
+			position: relative;
+			width: 50vw;
+			height: 50vw;
+		}
+		.o1{
+			z-index: 250;
+			position: absolute;
+			width: 45vw;
+			height: 45vw;
+		}
+		.o2{
+			position: absolute;
+			width: 30vw;
+			height: 30vw;
+			z-index: 200;
+			margin-top: 7.4vw;
+			margin-left: 7.5vw;
+			animation-name: rotateo1;
+			animation-duration: 40s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.o3{
+			position: absolute;
+			width: 45vw;
+			z-index: 50;
+			height: 45vw;
+			animation-name: rotateo1;
+			animation-duration: 45s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.o4{
+			position: absolute;
+			width: 45vw;
+			animation-name: rotateo1;
+			animation-duration: 100s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			z-index: 10;
+			height: 45vw;
+		}
+		.title{
+			position:absolute;
+			margin-top: 17vw;
+			width: 35vw;
+			margin-left: 6vw;
+			z-index: 260;
+		}
+		.title-text{
+			animation-name: neon1;
+			animation-iteration-count: infinite;
+			color: #bc13fe;
+			animation-duration: 1.5s;
+			font-family: cursive;
+			font-size: 4vw;
+		}
+		.coming{
+			position: absolute;
+			margin-left: 5vw;
+			margin-top:6vh;
+			color: #ffffff;
+			margin-bottom:1vw; 
+		}
+        @font-face{
+				  font-family: 'Modulus';
+				  src: url("Modulus.ttf?v=2.0.0") format("truetype") ;
+			}
+		.comingsoon{
+			position: relative;
+			font-family: 'Modulus';
+			color: white;
+			font-size: 5vw;
+			z-index: 100;
+		}
+			.days{
+				color: white;
+				font-size: 4vw;
+				z-index: 100;
+			}
+		@keyframes rotateo1{
+			0%{
+				transform: rotateZ(0deg);
+			}
+			100%{
+				transform:rotateZ(360deg);
+			}
+		}
+		@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+  @keyframes neon2{
+  from {
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+  }
+}
+.content{
+	position: absolute;
+	width: 40vw;
+}
+.conflu-content{
+	font-size:1.6vw;
+	text-align: justify;
+	color:#D3D1D1;
+}
+.timer{
+	position: absolute;
+	width: 40vw;
+	margin-top: 30vh;
+	padding: 0;
+	border-radius: 6vw;
+	text-align: center;
+	background: rgb(190,41,130);
+	background: linear-gradient(360deg, rgba(190,41,130,1) 0%, rgba(71,26,108,1) 100%);
+}
+#days{
+	margin:0.5vw;
+	position: relative;
+	color: white;
+	font-size: 3vw;
+}
+.hrline{
+	width: 40vw;
+	height: 0.3vh;
+	background: rgb(190,41,130);
+background: radial-gradient(circle, rgba(190,41,130,1) 0%, rgba(71,26,108,1) 100%);
+border:none;
+}     
+        .t-hrline{
+                display: none;
+           
+            }
+            .t-content{
+                display: none;
+            }
+        
+        
+.vid{
+    margin-left: 20vw;
+    margin-top: 2vw;
+        }
+                        .vid iframe{
+                                  width: 60vw;
+                                  height: 35vw;
+                        }
+        .teaser-text{
+            text-align: center;
+            color: #fff;
+            font-family:fantasy ;
+            letter-spacing: 5px;
+            font-weight: 100;
+        }
+        
+ ul{
+                margin: 0;
+                padding: 0;
+                
+     
+              width: 100vw;
+                display: flex;
+     justify-content: center;
+     margin-top: 5vh;
+               
+                
+                
+            }
+        .icons{
+    align-content: center;
+        }
+        ul li
+            {
+                             
+                list-style-type: none;
+            }
+            ul li a{
+                position: relative;
+                width: 50px; 
+                height: 50px;
+            
+                display: block;
+                text-align: center;
+                margin: 0 8.3px;
+                border-radius: 50%;
+                padding: 4.13px;
+                box-sizing: border-box;
+                text-decoration: none;
+                box-shadow: 0 8.3px 12.5px rgba(0,0,0,0.3);
+                background: linear-gradient(0deg, #ddd, #fff);
+                transition: 0.5s;
+            }
+            ul li a:hover{
+                box-shadow: 0 1.6px 4.1px rgba(0,0,0,0.3);
+                
+            }
+            ul li a .fa{
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: linear-gradient(0deg, #fff, #ddd);;
+                border-radius: 50%;
+                line-height: calc(50px - 6.67px);
+                font-size: 21.4px;
+                color: #262626;
+                transition: 0.5s;
+                
+            }
+            ul li:nth-child(1) a:hover .fa{
+                color: #3b5998;
+            }
+            ul li:nth-child(2) a:hover .fa{
+                color: #00aced;
+            }
+            ul li:nth-child(3) a:hover .fa{
+                color: #bc2a8d;
+            }
+            ul li:nth-child(4) a:hover .fa{
+                color: #dd4b39;
+            }
+           
+        
+        
+        @media only screen and (max-width: 500px){
+            .chakra{
+			margin-left: 8vw; 
+                margin-top: 8vw;
+				width: 80vw;
+			height: 80vw;
+		}
+            .o1{
+			     width: 80vw;
+			     height: 80vw;
+		}
+		.o2{
+			width: 53.33vw;
+			height: 53.33vw;
+			margin-top: 13.16vw;
+			margin-left: 13.33vw;
+			
+		}
+		.o3{
+			width: 80vw;
+			height: 80vw;
+		}
+		.o4{
+			
+			width: 80vw;
+			height: 80vw;
+		}
+            .title{
+			margin-top: 28.3vw;
+			width: 35vw;
+			margin-left: 0vw;
+                width: 80vw;
+                height: auto;
+		}
+            .comingsoon{
+                font-size: 8vw;
+                text-align: center;
+                margin-left: 3vw;
+            }
+            .coming{
+			margin-left: 17vw;
+			margin-top:54vh;
+			margin-bottom:1vw; 
+		}
+            .timer{
+                width: 60vw;
+                height: 7vh;
+                margin-top: 5vh;
+                padding: 0;
+}
+            #days{
+	margin:0.5vw;
+	position: relative;
+	color: white;
+	font-size: 6vw;
+}
+            .hrline{
+                display: none;
+            } 
+            .content{
+                display: none;
+            }
+              .t-hrline{
+                margin-top: 4vh;
+                width: 80%;
+                   display: block;
+            }
+            .t-content{
+                width: 80%;
+                margin-left: 10vw;
+                 display: block;
+            }
+             .t-content .conflu-content{
+                 font-size: 3.3vw;
+             } 
+            .vid{
+   margin-left: 0vw;
+    margin-top: 6vw;
+        }
+            .vid iframe{
+                                  width: 100vw;
+                                  height: 55vw;
+                        } 
+            
+        }
+         @media only screen and (max-width: 700px) and (min-width:501px){
+            .chakra{
+			margin-left: 12.6vw; 
+                margin-top: 4vw;
+				width: 80vw;
+			height: 80vw;
+		}
+            .o1{
+			     width: 70vw;
+			     height: 70vw;
+		}
+		.o2{
+			width: 46.67vw;
+			height: 46.67vw;
+			margin-top: 11.51vw;
+			margin-left: 11.66vw;
+			
+		}
+		.o3{
+			width: 70vw;
+			height: 70vw;
+		}
+		.o4{
+			
+			width: 70vw;
+			height: 70vw;
+		}
+            .title{
+			margin-top: 24.78vw;
+			width: 35vw;
+			margin-left: 0vw;
+                width: 70vw;
+                height: auto;
+		}
+            .comingsoon{
+                font-size: 7vw;
+                text-align: center;
+                margin-left: 3vw;
+            }
+            .coming{
+			margin-left: 19vw;
+			margin-top:70vh;
+			margin-bottom:1vw; 
+		}
+            .timer{
+                width: 52.5vw;
+                height: 7vh;
+                margin-top: 0vh;
+                padding: 0;
+}
+            #days{
+	margin:0.5vw;
+	position: relative;
+	color: white;
+	font-size: 6vw;
+}
+            .hrline{
+                display: none;
+            } 
+            .content{
+                display: none;
+            }
+              .t-hrline{
+                margin-top: 4vh;
+                width: 60%;
+                  display: block;
+            }
+            .t-content{
+                width: 60%;
+                margin-left: 20vw;
+                display: block;
+                
+            }
+             .t-content .conflu-content{
+                 font-size: 2vw;
+             } 
+              .vid{
+   margin-left: 10vw;
+    margin-top: 6vw;
+        }
+            .vid iframe{
+                                  width: 80vw;
+                                  height: 45vw;
+                        }
+        }
+        @media only screen and (max-width: 850px) and (min-width:701px){
+            .chakra{
+			margin-left: 12.9vw; 
+                margin-top: 2vw;
+				width: 80vw;
+			height: 80vw;
+		}
+            .o1{
+			     width: 70vw;
+			     height: 70vw;
+		}
+		.o2{
+			width: 46.67vw;
+			height: 46.67vw;
+			margin-top: 11.51vw;
+			margin-left: 11.66vw;
+			
+		}
+		.o3{
+			width: 70vw;
+			height: 70vw;
+		}
+		.o4{
+			
+			width: 70vw;
+			height: 70vw;
+		}
+            .title{
+			margin-top: 24.78vw;
+			width: 35vw;
+			margin-left: 0vw;
+                width: 70vw;
+                height: auto;
+		}
+            .comingsoon{
+                font-size: 5.5vw;
+                text-align: center;
+            }
+            .coming{
+			margin-left: 3vw;
+			margin-top:82vh;
+			margin-bottom:1vw; 
+		}
+            .timer{
+                width: 40vw;
+                height: 7vh;
+                margin-top: -12.7vh;
+                margin-left: 50vw;
+                padding: 0;
+}
+            #days{
+	margin-top:-0.4vw;
+	position: relative;
+	color: white;
+	font-size: 6vw;
+}
+            .hrline{
+                display: none;
+            } 
+            .content{
+                display: none;
+            }
+            .t-hrline{
+                margin-top: 4vh;
+                width: 50%;
+                 display: block;
+            }
+            .t-content{
+                width: 50%;
+                margin-left: 25vw;
+                 display: block;
+            }
+             .vid{
+   margin-left: 15vw;
+    margin-top: 6vw;
+        }
+            .vid iframe{
+                                  width: 70vw;
+                                  height: 38vw;
+                        }
+        }
+        @media only screen and (max-width: 1000px) and (min-width:851px){
+            .coming{
+			margin-left: 5vw;
+			margin-top:17vh;
+			margin-bottom:1vw; 
+		}
+            .chakra{
+			margin-left: 50vw; 
+                margin-top: 14vh;
+				width: 50vw;
+			height: 50vw;
+		}
+            .title{
+			margin-top: 16vw;
+			width: 35vw;
+			margin-left: 0vw;
+                width: 45vw;
+                height: auto;
+		}
+            .t-hrline{
+                display: none;
+            }
+            .t-content{
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 1200px) and (min-width:1001px){
+            .coming{
+			margin-left: 5vw;
+			margin-top:13vh;
+			margin-bottom:1vw; 
+		}
+            .chakra{
+			margin-left: 50vw; 
+                margin-top: 14vh;
+				width: 50vw;
+			height: 50vw;
+		}
+            .title{
+			margin-top: 16vw;
+			width: 35vw;
+			margin-left: 0vw;
+                width: 45vw;
+                height: auto;
+		}
+            .t-hrline{
+                display: none;
+            }
+            .t-content{
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 1300px) and (min-width:1201px){
+            .coming{
+			margin-left: 5vw;
+			margin-top:13vh;
+			margin-bottom:1vw; 
+		}
+            .chakra{
+			margin-left: 50vw; 
+                margin-top: 8vh;
+				width: 50vw;
+			height: 50vw;
+		}
+            .title{
+			margin-top: 16vw;
+			width: 35vw;
+			margin-left: 0vw;
+                width: 45vw;
+                height: auto;
+		}
+            .t-hrline{
+                display: none;
+            }
+            .t-content{
+                display: none;
+            }
+        }
+        
+        
+	</style>
+</head>
+<body class="mainbody">
+	<div class="main wd">
+			<div class="coming">
+				<h1 class="comingsoon">COMING SOON</h1>
+				<hr class="hrline">
+				<div class="content">
+				<p class="conflu-content">
+					A peep at some distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. It always does one good.A peep at some distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. It always does one good.
+				</p>
+			</div>
+			<div class="timer">
+				<h1 id="days"></h1>
+			</div>
+			</div>
+			
+			<div class="chakra">
+			<img class="o1" src="o1.png">
+			<img class="o2" src="o2.png">
+			<img class="o3" src="o3.png">
+			<img class="o4" src="o4.png">
+			<img class="title" src="title.png">
+		</div>
+	</div>
+	<div class="teaser wd">
+        <hr class="t-hrline">
+				<div class="t-content">
+				<p class="conflu-content">
+					A peep at some distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. It always does one good.A peep at some distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. It always does one good.
+				</p>
+			</div>
+        <div class="teaser-text">
+            <h1>TEASER</h1>
+        </div>
+        <div class="vid">
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZCyrjfdDy8k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="icons">
+            <ul>
+                 <li><a href=# ><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                 <li><a href=# ><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                 <li><a href=# ><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                 <li><a href=# ><i class="fa fa-google" aria-hidden="true"></i></a></li>
+
+        </ul>
+        </div>
+	</div>
+	
+	
+</body>
+</html>
